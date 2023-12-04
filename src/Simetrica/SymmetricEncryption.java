@@ -37,7 +37,7 @@ public class SymmetricEncryption {
 		
 		try {
 			cipher.init(Cipher.ENCRYPT_MODE, sKey);
-			byte [] encryptedPhrase = cipher.doFinal(phrase.getBytes());
+			byte[] encryptedPhrase = cipher.doFinal(phrase.getBytes());
 			encryptedPhraseBase64 = Base64.getEncoder().encodeToString(encryptedPhrase);
 			System.out.println("Frase encriptada con éxito! ");
 			
@@ -56,6 +56,7 @@ public class SymmetricEncryption {
 				byte [] decryptedPhrase = cipher.doFinal(encryptedPhrase);
 				System.out.println("frase encriptada: " + new String (encryptedPhraseBase64));
 				System.out.println("frase desencriptada : " + new String(decryptedPhrase));
+			
 			} else {
 				System.out.println("AVISO: No existe ninguna frase guardada para desencriptar! ");
 			}

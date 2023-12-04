@@ -6,17 +6,17 @@ import java.security.NoSuchAlgorithmException;
 
 public class User {
 
-	private String username;
+	private String userName;
 	private String hashedPassword;
 	
-	public User(String username, String password) {
+	public User(String userName, String password) {
 		super();
-		this.username = username;
+		this.userName = userName;
 		this.hashedPassword = hashedPass(password);
 	}
 	
 	public String getUsername() {
-		return username;
+		return userName;
 	}
 	
 	public String getPassword() {
